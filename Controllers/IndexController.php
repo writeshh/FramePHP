@@ -1,5 +1,5 @@
 <?php
-/** Autoloading The required Classes **/
+
 class IndexController
 {
     private $model;
@@ -12,19 +12,10 @@ class IndexController
 
     public function index()
     {
-        Init::view('index');
+        Init::view('index', [
+            'posts' => $this->model->getPosts(),
+            'title' => 'MVC Example',
+        ]);
     }
 
-    public function showUsers()
-    {
-        print_r($this->model->getUsers());
-    }
-
-    public function data()
-    {
-        Init::view('main/data', array(
-            'posts' => ['post1','post2'],
-            'comments' => ['comment1','comment2']
-        ));
-    }
 }
