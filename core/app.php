@@ -24,6 +24,7 @@ class Init
     public function path_split($path)
     {
         $this->capsule = explode('/', ltrim($path));
+
         return $this->capsule;
     }
 

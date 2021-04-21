@@ -12,13 +12,7 @@ class IndexController
 
     public function index()
     {
-        /** Initializing a index.html view Found in (Views/index.html) **/
         Init::view('index');
-    }
-
-    public function login()
-    {
-        echo "Login Method";
     }
 
     public function showUsers()

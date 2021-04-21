@@ -1,7 +1,9 @@
 <?php
 
+use Core\Model;
+
 /** Autoloading The required Classes **/
-class IndexModel
+class IndexModel extends Model
 {
     public function getUsers()
     {
