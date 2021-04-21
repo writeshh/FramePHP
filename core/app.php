@@ -47,7 +47,7 @@ class Init
 
     public static function view($template_name, $data = array())
     {
-        $loader = new FilesystemLoader('views');
+        $loader = new FilesystemLoader('Views');
         $twig = new Environment($loader);
         $template = $twig->load($template_name . '.html');
         echo $template->render($data);

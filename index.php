@@ -12,7 +12,7 @@ require 'core/app.php';
 require 'vendor/autoload.php';
 
 $app = new Init;
-define('ENVIRONMENT', 'production');
+define('ENVIRONMENT', 'development');
 /*
 *---------------------------------------------------------------
 * ERROR REPORTING
@@ -57,8 +57,8 @@ if (isset($_SERVER['PATH_INFO'])) {
 
 switch (Init::is_slash($server)) {
     case true:
-        require_once __DIR__.'/Models/indexModel.php';
-        require_once __DIR__.'/Controllers/indexController.php';
+        require_once __DIR__.'/Models/IndexModel.php';
+        require_once __DIR__.'/Controllers/IndexController.php';
         $app->req_model = new IndexModel();
         $app->req_controller = new IndexController($app->req_model);
         /**
